@@ -984,7 +984,7 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/306e84b125310ef3931828bcafbb4468fda473829b287e459c689aa4077425bc.png" src="_images/306e84b125310ef3931828bcafbb4468fda473829b287e459c689aa4077425bc.png" />
+<img alt="gambar/graph-2.png" src="gambar/graph-2.png" />
 </div>
 </div>
 </section>
@@ -1007,7 +1007,7 @@ dtype: int64
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 0 Axes&gt;
 </pre></div>
 </div>
-<img alt="_images/0780ecf6b1762d2f4973c4626e08e020c50fb82cf21f32e0fa554416754e5a90.png" src="_images/0780ecf6b1762d2f4973c4626e08e020c50fb82cf21f32e0fa554416754e5a90.png" />
+<img alt="gambar/graph-3.png" src="gambar/graph-3.png" />
 </div>
 </div>
 </section>
@@ -1623,7 +1623,7 @@ dtype: int64
 <li><p>Ambil sejumlah K data dengan jarak terdekat, kemudian tentukan kelas dari data baru tersebut.</p></li>
 </ul>
 <p>Untuk mencari dekat atau jauhnya jarak antar titik pada kelas k biasanya dihitung menggunakan jarak Euclidean. Jarak Euclidean adalah formula untuk mencari jarak antara 2 titik dalam ruang dua dimensi. Berikut rumus untuk menghitung jarak Euclidean:</p>
-<img src="Gambar/rumus_euclidean.webp" width="" align="" /><p>Dimiliki sebuah iris dataset yang memiliki 5 missing value di kolom SepalLengthCm</p>
+<img src="gambar/rumus_euclidean.webp" width="" align="" /><p>Dimiliki sebuah iris dataset yang memiliki 5 missing value di kolom SepalLengthCm</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_14</span> <span class="o">=</span> <span class="n">_deepnote_execute_sql</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM iris.iris_dataset_knn WHERE SepalLengthCm IS NULL&#39;</span><span class="p">,</span> <span class="s1">&#39;SQL_4BD01A4F_9F01_4CE8_9254_60CF462F2AD1&#39;</span><span class="p">,</span> <span class="n">audit_sql_comment</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">sql_cache_mode</span><span class="o">=</span><span class="s1">&#39;cache_disabled&#39;</span><span class="p">)</span>
@@ -1804,7 +1804,7 @@ dtype: int64
 Accuracy of our model is equal 100.0 %.
 </pre></div>
 </div>
-<img alt="_images/e3e00d886a43d40c918d6c3f6d8705480b38d0cbe50baf575757c1016e619d10.png" src="_images/e3e00d886a43d40c918d6c3f6d8705480b38d0cbe50baf575757c1016e619d10.png" />
+<img alt="gambar/graph-4.png" src="gambar/graph-4.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The optimal number of neighbors is 13.
 </pre></div>
 </div>
@@ -2040,14 +2040,14 @@ dtype: int64
 <li><p>Local Outlier Factor (LOF)</p></li>
 </ul>
 <p>K-distance dan K-neighbors</p>
-<img src="Gambar/k-distance.webp" width="" align="" /><p>K-distance adalah jarak antara suatu titik, dan merupakan tetangga terdekat Kᵗʰ. Tetangga K yang dilambangkan dengan Nₖ(A) mencakup himpunan titik yang terletak di dalam atau pada lingkaran berjari-jari jarak K. K-tetangga bisa lebih dari atau sama dengan nilai K. Kita akan melihat contohnya. Katakanlah kita mempunyai empat titik A, B, C, dan D.                                                                                                     Jika K=2, K-tetangga A adalah C, B, dan D. Di sini, nilai K=2 tetapi ||N₂(A)|| = 3. Oleh karena itu, ||Nₖ(titik)|| akan selalu lebih besar atau sama dengan K.</p>
+<img src="gambar/k-distance.webp" width="" align="" /><p>K-distance adalah jarak antara suatu titik, dan merupakan tetangga terdekat Kᵗʰ. Tetangga K yang dilambangkan dengan Nₖ(A) mencakup himpunan titik yang terletak di dalam atau pada lingkaran berjari-jari jarak K. K-tetangga bisa lebih dari atau sama dengan nilai K. Kita akan melihat contohnya. Katakanlah kita mempunyai empat titik A, B, C, dan D.                                                                                                     Jika K=2, K-tetangga A adalah C, B, dan D. Di sini, nilai K=2 tetapi ||N₂(A)|| = 3. Oleh karena itu, ||Nₖ(titik)|| akan selalu lebih besar atau sama dengan K.</p>
 <p>Reachability distance (RD)</p>
-<img src="Gambar/reachability-distance.webp" width="" align="" /><p>Ini didefinisikan sebagai jarak K maksimum Xj dan jarak antara Xi dan Xj. Ukuran jarak bersifat khusus untuk masalah (Euclidean, Manhattan, dll.)</p>
-<img src="Gambar/reachability-distance-diagram.webp" width="" align="" /><p>Dalam istilah awam, jika titik Xi terletak di dalam K-tetangga Xj, maka jarak jangkauannya adalah K-jarak Xj (garis biru), jika tidak, jarak jangkauannya adalah jarak antara Xi dan Xj (garis oranye).</p>
+<img src="gambar/reachability-distance.webp" width="" align="" /><p>Ini didefinisikan sebagai jarak K maksimum Xj dan jarak antara Xi dan Xj. Ukuran jarak bersifat khusus untuk masalah (Euclidean, Manhattan, dll.)</p>
+<img src="gambar/reachability-distance-diagram.webp" width="" align="" /><p>Dalam istilah awam, jika titik Xi terletak di dalam K-tetangga Xj, maka jarak jangkauannya adalah K-jarak Xj (garis biru), jika tidak, jarak jangkauannya adalah jarak antara Xi dan Xj (garis oranye).</p>
 <p>Local reachability density (LRD)</p>
-<img src="Gambar/lrd.webp" width="" align="" /><p>LRD merupakan kebalikan dari rata-rata jarak jangkauan A dari tetangganya. Semakin besar jarak jangkauan rata-rata (yaitu, tetangga jauh dari titik tersebut), semakin sedikit kepadatan titik yang ada di sekitar titik tertentu. Ini menunjukkan seberapa jauh suatu titik dari kelompok titik terdekat. Nilai LRD yang rendah menunjukkan bahwa cluster terdekat berada jauh dari titik.</p>
+<img src="gambar/lrd.webp" width="" align="" /><p>LRD merupakan kebalikan dari rata-rata jarak jangkauan A dari tetangganya. Semakin besar jarak jangkauan rata-rata (yaitu, tetangga jauh dari titik tersebut), semakin sedikit kepadatan titik yang ada di sekitar titik tertentu. Ini menunjukkan seberapa jauh suatu titik dari kelompok titik terdekat. Nilai LRD yang rendah menunjukkan bahwa cluster terdekat berada jauh dari titik.</p>
 <p>Local Outlier Factor (LOF)</p>
-<img src="Gambar/lof.webp" width="" align="" /><p>LRD tiap titik digunakan untuk membandingkan dengan rata-rata LRD K tetangganya. LOF adalah perbandingan rata-rata LRD K tetangga A terhadap LRD A.</p>
+<img src="gambar/lof.webp" width="" align="" /><p>LRD tiap titik digunakan untuk membandingkan dengan rata-rata LRD K tetangganya. LOF adalah perbandingan rata-rata LRD K tetangga A terhadap LRD A.</p>
 <p>Jika suatu titik bukan merupakan pencilan (inlier), rasio rata-rata LRD tetangganya kira-kira sama dengan LRD suatu titik (karena kepadatan suatu titik dan tetangganya kira-kira sama). Dalam hal ini, LOF hampir sama dengan 1. Sebaliknya, jika suatu titik merupakan outlier, LRD suatu titik lebih kecil dari rata-rata LRD tetangganya. Maka nilai LOF akan tinggi.</p>
 <p>Umumnya jika LOF &gt; 1 maka dianggap outlier, namun hal tersebut tidak selalu benar. Katakanlah kita mengetahui bahwa kita hanya memiliki satu outlier dalam data, lalu kita ambil nilai LOF maksimum di antara semua nilai LOF, dan titik yang sesuai dengan nilai LOF maksimum akan dianggap sebagai outlier.</p>
 </section>
@@ -2068,38 +2068,38 @@ dtype: int64
 <li><p>Menghitung Local Outlier Factor (LOF)</p></li>
 </ol>
 <p>Mari kita tentukan data yang akan kita gunakan untuk melakukan perhitungan manual. Contoh data memiliki 3 fitur yaitu X, Y, Z yang masing masing bertipe data numeric, dan berjumlah 10.</p>
-<img src="tabel/tabel_data.webp" width="" align="" /><ol class="arabic simple">
+<img src="gambar/tabel_data.webp" width="" align="" /><ol class="arabic simple">
 <li><p>Menghitung jarak dan menentukan tetangga</p></li>
 </ol>
 <p>Selanjutnya untuk menghitung jarak, kita menggunakan Euclidean Distance. Untuk rumusnya yaitu :</p>
-<img src="Gambar/rumus_euclidean.webp" width="" align="" /><p>Didapatkan hasil perhitungan jarak :</p>
-<img src="tabel/tabel_euclidean1.webp" width="" align="" /><img src="tabel/tabel_euclidean.webp" width="" align="" /><p>Selanjutnya mari kita tentukan nilai K (banyak tetangga) yang akan kita gunakan. Mari gunakan nilai K = 3, lalu kita identifikasi jarak tetangga ke-3 dari masing-masing data.</p>
-<img src="tabel/tabel_tetangga3_1.webp" width="" align="" /><img src="tabel/tabel_tetangga3_2.webp" width="" align="" /><ol class="arabic simple" start="2">
+<img src="gambar/rumus_euclidean.webp" width="" align="" /><p>Didapatkan hasil perhitungan jarak :</p>
+<img src="gambar/tabel_euclidean1.webp" width="" align="" /><img src="gambar/tabel_euclidean.webp" width="" align="" /><p>Selanjutnya mari kita tentukan nilai K (banyak tetangga) yang akan kita gunakan. Mari gunakan nilai K = 3, lalu kita identifikasi jarak tetangga ke-3 dari masing-masing data.</p>
+<img src="gambar/tabel_tetangga3_1.webp" width="" align="" /><img src="gambar/tabel_tetangga3_2.webp" width="" align="" /><ol class="arabic simple" start="2">
 <li><p>Menghitung Reachability Distance (RD)</p></li>
 </ol>
 <p>Selanjutnya kita hitung nilai Reachability Distance dari masing-masing objek. Tapi sebelum itu kita harus menentukan berapa banyak objek yang masuk ke dalam ruang lingkup tetangga ke-n dari suatu objek. Secara matematis bisa dituliskan seperti di bawah ini :</p>
 <p>k-distance neighborhood of o, Nk(o) = {o’| o’ in D, dist(o, o’) ≤ distk(o)}</p>
 <p>Yang dimana nilai dari Nk(o) akan lebih besar atau sama dengan nilai K</p>
 <p>Untuk contohnya pada objek a memiliki nilai jarak tetangga ke-3 yaitu 1,414214, berarti objek lain yang masuk ke dalam lingkupnya yaitu yang nilainya kurang atau sama dengan 1,414214 yang berarti berisikan {b, c, f}. Mari kita lakukan untuk objek yang lain.</p>
-<img src="tabel/tabel_n.webp" width="" align="" /><p>Selanjutnya hitung Reachability Distance dari maring-masing objek, untuk rumusnya yaitu :</p>
-<img src="Gambar/rd.webp" width="50%" align="" /><p>Sebagai contoh objek a, objek a memiliki 3 tetangga terdekat yaitu {b, c, f} kita lakukan perhitungan terhadap masing-masing objek, dengan memilih nilai terbesar dari perbandingan jarak tetangga ke-3 dari objek dengan jarak objek ke objek lain:</p>
+<img src="gambar/tabel_n.webp" width="" align="" /><p>Selanjutnya hitung Reachability Distance dari maring-masing objek, untuk rumusnya yaitu :</p>
+<img src="gambar/rd.webp" width="50%" align="" /><p>Sebagai contoh objek a, objek a memiliki 3 tetangga terdekat yaitu {b, c, f} kita lakukan perhitungan terhadap masing-masing objek, dengan memilih nilai terbesar dari perbandingan jarak tetangga ke-3 dari objek dengan jarak objek ke objek lain:</p>
 <p>reachdist3(b&lt;-a) = max{dist3(b), dist(b,a)}</p>
 <p>reachdist3(b&lt;-a) = max(1, 1)</p>
 <p>reachdist3(b&lt;-a) =1</p>
 <p>Mari kita lakukan untuk keseluruhan objek</p>
-<img src="tabel/tabel_rd_1.webp" width="" align="" /><img src="tabel/tabel_rd_2.webp" width="" align="" /><ol class="arabic simple" start="3">
+<img src="gambar/tabel_rd_1.webp" width="" align="" /><img src="gambar/tabel_rd_2.webp" width="" align="" /><ol class="arabic simple" start="3">
 <li><p>Menghitung Local Reachability Distance (LRD)</p></li>
 </ol>
 <p>Selanjutnya melakukan perhitungan Local Reachability Distance (LRD), LRD dirumuskan seperti di bawah ini :</p>
-<img src="Gambar/image-20240320-015046.png" width="50%" align="" /><p>Berdasarkan rumus diatas bisa dideskripsikan bahwa LRD merupakan hasil dari pembagian banyak jumlah tetangga ke-n dari suatu objek dibagi dengan total dari reachdistance ability objek tersebut.</p>
+<img src="gambar/image-20240320-015046.png" width="50%" align="" /><p>Berdasarkan rumus diatas bisa dideskripsikan bahwa LRD merupakan hasil dari pembagian banyak jumlah tetangga ke-n dari suatu objek dibagi dengan total dari reachdistance ability objek tersebut.</p>
 <p>Sehinga jika dilakukan perhitungan untuk setiap objek didapatkan hasil</p>
-<img src="tabel/image-20240320-020236.png" width="" align="" /><ol class="arabic simple" start="4">
+<img src="gambar/image-20240320-020236.png" width="" align="" /><ol class="arabic simple" start="4">
 <li><p>Menghitung Local Outlier Factor (LOF)</p></li>
 </ol>
 <p>Selanjutnya yang terakhir yaitu menghitung Local Outlier Factor (LOF), dirumuskan sebagai berikut :</p>
-<img src="Gambar/image-20240320-020521.png" width="75%" align="" /><p>Berdasarkan rumus diatas diketahui jika LOF didapat dari hasil perkalian jumlah nilai lrd suatu objek dikali dengan jumlah reachability distance suatu objek.</p>
+<img src="gambar/image-20240320-020521.png" width="75%" align="" /><p>Berdasarkan rumus diatas diketahui jika LOF didapat dari hasil perkalian jumlah nilai lrd suatu objek dikali dengan jumlah reachability distance suatu objek.</p>
 <p>Sehinga jika dilakukan perhitungan untuk setiap objek didapatkan hasil</p>
-<img src="tabel/image-20240320-021026.png" width="" align="" /><p>Dari hasil diatas bisa ditemukan bahwa nilai lof e menyimpang dikarenakan perbedaan yang terlalu jauh dengan objek yang lain, sehingga bisa disimpulkan bahwa terdapat outlier pada baris e.</p>
+<img src="gambar/image-20240320-021026.png" width="" align="" /><p>Dari hasil diatas bisa ditemukan bahwa nilai lof e menyimpang dikarenakan perbedaan yang terlalu jauh dengan objek yang lain, sehingga bisa disimpulkan bahwa terdapat outlier pada baris e.</p>
 </section>
 <section id="menghitung-menggunakan-python-sckit-learn">
 <h3>Menghitung Menggunakan Python (sckit-learn)<a class="headerlink" href="#menghitung-menggunakan-python-sckit-learn" title="Link to this heading">#</a></h3>
@@ -2315,7 +2315,7 @@ Successfully installed mysql-connector-python-8.3.0
 <span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> To update, run: <span class=" -Color -Color-Green">pip install --upgrade pip</span>
 </pre></div>
 </div>
-<img alt="_images/ae08709739aab6fbb4e373f7afa5968f3b31f4b29d6c9692c2da8a88cb28c183.png" src="_images/ae08709739aab6fbb4e373f7afa5968f3b31f4b29d6c9692c2da8a88cb28c183.png" />
+<img alt="gambar/graph-5.png" src="gambar/graph-5.png" />
 </div>
 </div>
 <p>Berdasarkan hasil dari graph tersebut dapat diketahui jika outlier diidentifikasi dengan warna merah. Jika diamati outlier yang ditampilkan sebagai warna merah di sumbu x yang berbeda di sumbu y, ini menunjukkan bahwa ketiga titik tersebut mungkin memiliki nilai yang jauh dari nilai rata-rata atau mayoritas pada sumbu x, namun nilai mereka di sumbu y tidak selalu memiliki pola yang sama. Artinya, outlier-outlier ini mungkin terletak pada posisi yang ekstrem pada sumbu x, tetapi tidak pada sumbu y. yang dimana sumbu x adalah kolom SepalLengthCm dan sumbu y adalah kolom SepalWidthCm.</p>
