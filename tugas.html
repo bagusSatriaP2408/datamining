@@ -60,8 +60,6 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'tugas';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Notebooks with MyST Markdown" href="markdown-notebooks.html" />
-    <link rel="prev" title="Markdown Files" href="markdown.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -123,6 +121,8 @@
       
       
       
+        
+      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -139,7 +139,7 @@
 
   
 
-<a class="navbar-brand logo" href="intro.html">
+<a class="navbar-brand logo" href="#">
   
   
   
@@ -170,19 +170,13 @@
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1">
-                <a class="reference internal" href="intro.html">
-                    Welcome to your Jupyter Book
+            <li class="toctree-l1 current active">
+                <a class="reference internal" href="#">
+                    PENAMBANGAN DATA 2024 ⛏️⛏️⛏️
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">PENAMBANGAN DATA 2024 ⛏️⛏️⛏️</a></li>
-
-<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
-</ul>
-
+        
     </div>
 </nav></div>
     </div>
@@ -383,14 +377,8 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deskripsi-statistik-sederhana">1.2 Deskripsi Statistik Sederhana</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisasi-data">2. Visualisasi Data</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parallel-coordinates">2.1 Parallel Coordinates</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#andrews-curves">2.2 Andrews Curves</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pairplot">2.3 Pairplot</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing-data">3. Preprocessing Data</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-cleaning">3.1 Data Cleaning</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing-data">2. Preprocessing Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-cleaning">2.1 Data Cleaning</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penanganan-missing-values-dengan-menggunakan-metode-mean">- Penanganan Missing Values dengan menggunakan metode Mean</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penanganan-missing-values-dengan-menggunakan-metode-knn-k-nearest-neighbors">- Penanganan Missing Values dengan menggunakan metode KNN (K-Nearest Neighbors)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deteksi-outlier-local-outlier-factor">- Deteksi Outlier (Local Outlier Factor)</a></li>
@@ -398,9 +386,12 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-manual-local-outlier-factor-lof">Menghitung Manual Local Outlier Factor (LOF)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-menggunakan-python-sckit-learn">Menghitung Menggunakan Python (sckit-learn)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-pada-dataset-iris">Implementasi Pada Dataset Iris</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-integration">3.2 Data Integration</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-integration">2.2 Data Integration</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#klasifikasi-gaussian-naive-bayes">Klasifikasi Gaussian Naive Bayes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menggunakan-code">Menggunakan Code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hitung-manual">Hitung Manual</a></li>
 </ul>
 </li>
 </ul>
@@ -937,85 +928,10 @@ dtype: int64
 </div>
 </section>
 </section>
-<section id="visualisasi-data">
-<h2>2. Visualisasi Data<a class="headerlink" href="#visualisasi-data" title="Link to this heading">#</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-<span class="o">%</span><span class="k">matplotlib</span> inline
-</pre></div>
-</div>
-</div>
-</div>
-<section id="parallel-coordinates">
-<h3>2.1 Parallel Coordinates<a class="headerlink" href="#parallel-coordinates" title="Link to this heading">#</a></h3>
-<p>Parallel Coordinates merupakan teknik plotting untuk memplot data multivariat. Hal ini memungkinkan seseorang untuk melihat cluster dalam data dan memperkirakan statistik lainnya secara visual. Dengan menggunakan Parallel Coordinates, titik-titik direpresentasikan sebagai segmen garis yang terhubung. Setiap garis vertikal mewakili satu atribut. Satu set segmen garis yang terhubung mewakili satu titik data. Titik-titik yang cenderung mengelompok akan tampak saling berdekatan.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pandas.plotting</span> <span class="kn">import</span> <span class="n">parallel_coordinates</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
-<span class="n">parallel_coordinates</span><span class="p">(</span><span class="n">dataset</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;Id&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> <span class="s2">&quot;Species&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Parallel Coordinates Plot&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Features&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Features values&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">prop</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="mi">15</span><span class="p">},</span> <span class="n">frameon</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">shadow</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="gambar/graph-1.png" src="gambar/graph-1.png" />
-</div>
-</div>
-</section>
-<section id="andrews-curves">
-<h3>2.2 Andrews Curves<a class="headerlink" href="#andrews-curves" title="Link to this heading">#</a></h3>
-<p>Andrews Curves memungkinkan seseorang untuk memplot data multivariat sebagai sejumlah besar kurva yang dibuat menggunakan atribut sampel sebagai koefisien untuk deret Fourier. Dengan mewarnai kurva ini secara berbeda untuk setiap kelas, pengelompokan data dapat divisualisasikan. Kurva milik sampel dari kelas yang sama biasanya akan saling berdekatan dan membentuk struktur yang lebih besar.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pandas.plotting</span> <span class="kn">import</span> <span class="n">andrews_curves</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
-<span class="n">andrews_curves</span><span class="p">(</span><span class="n">dataset</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;Id&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> <span class="s2">&quot;Species&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Andrews Curves Plot&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">prop</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="mi">15</span><span class="p">},</span> <span class="n">frameon</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">shadow</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="gambar/graph-2.png" src="gambar/graph-2.png" />
-</div>
-</div>
-</section>
-<section id="pairplot">
-<h3>2.3 Pairplot<a class="headerlink" href="#pairplot" title="Link to this heading">#</a></h3>
-<p>Pairplot berguna ketika Anda ingin memvisualisasikan distribusi suatu variabel atau hubungan antara beberapa variabel secara terpisah dalam subkumpulan kumpulan data Anda.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">pairplot</span><span class="p">(</span><span class="n">dataset</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;Id&quot;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> <span class="n">hue</span> <span class="o">=</span> <span class="s2">&quot;Species&quot;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">markers</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;o&quot;</span><span class="p">,</span> <span class="s2">&quot;s&quot;</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/shared-libs/python3.9/py/lib/python3.9/site-packages/seaborn/axisgrid.py:2100: UserWarning: The `size` parameter has been renamed to `height`; please update your code.
-  warnings.warn(msg, UserWarning)
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 0 Axes&gt;
-</pre></div>
-</div>
-<img alt="gambar/graph-3.png" src="gambar/graph-3.png" />
-</div>
-</div>
-</section>
-</section>
 <section id="preprocessing-data">
-<h2>3. Preprocessing Data<a class="headerlink" href="#preprocessing-data" title="Link to this heading">#</a></h2>
+<h2>2. Preprocessing Data<a class="headerlink" href="#preprocessing-data" title="Link to this heading">#</a></h2>
 <section id="data-cleaning">
-<h3>3.1 Data Cleaning<a class="headerlink" href="#data-cleaning" title="Link to this heading">#</a></h3>
+<h3>2.1 Data Cleaning<a class="headerlink" href="#data-cleaning" title="Link to this heading">#</a></h3>
 <p>Tahap pertama yang perlu dilakukan ketika akan preprocessing data adalah data cleaning atau membersihkan data. Artinya, data mentah yang telah Anda peroleh perlu diseleksi kembali. Kemudian, hapus atau hilangkan data-data yang tidak lengkap, tidak relevan, dan tidak akurat. Dengan melakukan tahap ini, Anda akan menghindari kesalahpahaman ketika menganalisis data tersebut.</p>
 <p>Ada dua hal yang harus Anda perhatikan ketika melakukan data cleaning, yakni pastikan data-data yang dikumpulkan tidak lagi mengandung data dengan missing values. Lalu, Anda juga harus memastikan bahwa data-data tersebut seluruhnya diperlukan saat proses analisis data. Dengan demikian, data yang Anda kumpulkan telah disesuaikan dan tidak mubazir.</p>
 </section>
@@ -1623,7 +1539,7 @@ dtype: int64
 <li><p>Ambil sejumlah K data dengan jarak terdekat, kemudian tentukan kelas dari data baru tersebut.</p></li>
 </ul>
 <p>Untuk mencari dekat atau jauhnya jarak antar titik pada kelas k biasanya dihitung menggunakan jarak Euclidean. Jarak Euclidean adalah formula untuk mencari jarak antara 2 titik dalam ruang dua dimensi. Berikut rumus untuk menghitung jarak Euclidean:</p>
-<img src="gambar/rumus_euclidean.webp" width="" align="" /><p>Dimiliki sebuah iris dataset yang memiliki 5 missing value di kolom SepalLengthCm</p>
+<img src="Gambar/rumus_euclidean.webp" width="" align="" /><p>Dimiliki sebuah iris dataset yang memiliki 5 missing value di kolom SepalLengthCm</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_14</span> <span class="o">=</span> <span class="n">_deepnote_execute_sql</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM iris.iris_dataset_knn WHERE SepalLengthCm IS NULL&#39;</span><span class="p">,</span> <span class="s1">&#39;SQL_4BD01A4F_9F01_4CE8_9254_60CF462F2AD1&#39;</span><span class="p">,</span> <span class="n">audit_sql_comment</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">sql_cache_mode</span><span class="o">=</span><span class="s1">&#39;cache_disabled&#39;</span><span class="p">)</span>
@@ -1804,7 +1720,7 @@ dtype: int64
 Accuracy of our model is equal 100.0 %.
 </pre></div>
 </div>
-<img alt="gambar/graph-4.png" src="gambar/graph-4.png" />
+<img alt="_images/e3e00d886a43d40c918d6c3f6d8705480b38d0cbe50baf575757c1016e619d10.png" src="_images/e3e00d886a43d40c918d6c3f6d8705480b38d0cbe50baf575757c1016e619d10.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The optimal number of neighbors is 13.
 </pre></div>
 </div>
@@ -2040,14 +1956,14 @@ dtype: int64
 <li><p>Local Outlier Factor (LOF)</p></li>
 </ul>
 <p>K-distance dan K-neighbors</p>
-<img src="gambar/k-distance.webp" width="" align="" /><p>K-distance adalah jarak antara suatu titik, dan merupakan tetangga terdekat Kᵗʰ. Tetangga K yang dilambangkan dengan Nₖ(A) mencakup himpunan titik yang terletak di dalam atau pada lingkaran berjari-jari jarak K. K-tetangga bisa lebih dari atau sama dengan nilai K. Kita akan melihat contohnya. Katakanlah kita mempunyai empat titik A, B, C, dan D.                                                                                                     Jika K=2, K-tetangga A adalah C, B, dan D. Di sini, nilai K=2 tetapi ||N₂(A)|| = 3. Oleh karena itu, ||Nₖ(titik)|| akan selalu lebih besar atau sama dengan K.</p>
+<img src="Gambar/k-distance.webp" width="" align="" /><p>K-distance adalah jarak antara suatu titik, dan merupakan tetangga terdekat Kᵗʰ. Tetangga K yang dilambangkan dengan Nₖ(A) mencakup himpunan titik yang terletak di dalam atau pada lingkaran berjari-jari jarak K. K-tetangga bisa lebih dari atau sama dengan nilai K. Kita akan melihat contohnya. Katakanlah kita mempunyai empat titik A, B, C, dan D.                                                                                                     Jika K=2, K-tetangga A adalah C, B, dan D. Di sini, nilai K=2 tetapi ||N₂(A)|| = 3. Oleh karena itu, ||Nₖ(titik)|| akan selalu lebih besar atau sama dengan K.</p>
 <p>Reachability distance (RD)</p>
-<img src="gambar/reachability-distance.webp" width="" align="" /><p>Ini didefinisikan sebagai jarak K maksimum Xj dan jarak antara Xi dan Xj. Ukuran jarak bersifat khusus untuk masalah (Euclidean, Manhattan, dll.)</p>
-<img src="gambar/reachability-distance-diagram.webp" width="" align="" /><p>Dalam istilah awam, jika titik Xi terletak di dalam K-tetangga Xj, maka jarak jangkauannya adalah K-jarak Xj (garis biru), jika tidak, jarak jangkauannya adalah jarak antara Xi dan Xj (garis oranye).</p>
+<img src="Gambar/reachability-distance.webp" width="" align="" /><p>Ini didefinisikan sebagai jarak K maksimum Xj dan jarak antara Xi dan Xj. Ukuran jarak bersifat khusus untuk masalah (Euclidean, Manhattan, dll.)</p>
+<img src="Gambar/reachability-distance-diagram.webp" width="" align="" /><p>Dalam istilah awam, jika titik Xi terletak di dalam K-tetangga Xj, maka jarak jangkauannya adalah K-jarak Xj (garis biru), jika tidak, jarak jangkauannya adalah jarak antara Xi dan Xj (garis oranye).</p>
 <p>Local reachability density (LRD)</p>
-<img src="gambar/lrd.webp" width="" align="" /><p>LRD merupakan kebalikan dari rata-rata jarak jangkauan A dari tetangganya. Semakin besar jarak jangkauan rata-rata (yaitu, tetangga jauh dari titik tersebut), semakin sedikit kepadatan titik yang ada di sekitar titik tertentu. Ini menunjukkan seberapa jauh suatu titik dari kelompok titik terdekat. Nilai LRD yang rendah menunjukkan bahwa cluster terdekat berada jauh dari titik.</p>
+<img src="Gambar/lrd.webp" width="" align="" /><p>LRD merupakan kebalikan dari rata-rata jarak jangkauan A dari tetangganya. Semakin besar jarak jangkauan rata-rata (yaitu, tetangga jauh dari titik tersebut), semakin sedikit kepadatan titik yang ada di sekitar titik tertentu. Ini menunjukkan seberapa jauh suatu titik dari kelompok titik terdekat. Nilai LRD yang rendah menunjukkan bahwa cluster terdekat berada jauh dari titik.</p>
 <p>Local Outlier Factor (LOF)</p>
-<img src="gambar/lof.webp" width="" align="" /><p>LRD tiap titik digunakan untuk membandingkan dengan rata-rata LRD K tetangganya. LOF adalah perbandingan rata-rata LRD K tetangga A terhadap LRD A.</p>
+<img src="Gambar/lof.webp" width="" align="" /><p>LRD tiap titik digunakan untuk membandingkan dengan rata-rata LRD K tetangganya. LOF adalah perbandingan rata-rata LRD K tetangga A terhadap LRD A.</p>
 <p>Jika suatu titik bukan merupakan pencilan (inlier), rasio rata-rata LRD tetangganya kira-kira sama dengan LRD suatu titik (karena kepadatan suatu titik dan tetangganya kira-kira sama). Dalam hal ini, LOF hampir sama dengan 1. Sebaliknya, jika suatu titik merupakan outlier, LRD suatu titik lebih kecil dari rata-rata LRD tetangganya. Maka nilai LOF akan tinggi.</p>
 <p>Umumnya jika LOF &gt; 1 maka dianggap outlier, namun hal tersebut tidak selalu benar. Katakanlah kita mengetahui bahwa kita hanya memiliki satu outlier dalam data, lalu kita ambil nilai LOF maksimum di antara semua nilai LOF, dan titik yang sesuai dengan nilai LOF maksimum akan dianggap sebagai outlier.</p>
 </section>
@@ -2068,38 +1984,38 @@ dtype: int64
 <li><p>Menghitung Local Outlier Factor (LOF)</p></li>
 </ol>
 <p>Mari kita tentukan data yang akan kita gunakan untuk melakukan perhitungan manual. Contoh data memiliki 3 fitur yaitu X, Y, Z yang masing masing bertipe data numeric, dan berjumlah 10.</p>
-<img src="gambar/tabel_data.webp" width="" align="" /><ol class="arabic simple">
+<img src="tabel/tabel_data.webp" width="" align="" /><ol class="arabic simple">
 <li><p>Menghitung jarak dan menentukan tetangga</p></li>
 </ol>
 <p>Selanjutnya untuk menghitung jarak, kita menggunakan Euclidean Distance. Untuk rumusnya yaitu :</p>
-<img src="gambar/rumus_euclidean.webp" width="" align="" /><p>Didapatkan hasil perhitungan jarak :</p>
-<img src="gambar/tabel_euclidean1.webp" width="" align="" /><img src="gambar/tabel_euclidean.webp" width="" align="" /><p>Selanjutnya mari kita tentukan nilai K (banyak tetangga) yang akan kita gunakan. Mari gunakan nilai K = 3, lalu kita identifikasi jarak tetangga ke-3 dari masing-masing data.</p>
-<img src="gambar/tabel_tetangga3_1.webp" width="" align="" /><img src="gambar/tabel_tetangga3_2.webp" width="" align="" /><ol class="arabic simple" start="2">
+<img src="Gambar/rumus_euclidean.webp" width="" align="" /><p>Didapatkan hasil perhitungan jarak :</p>
+<img src="tabel/tabel_euclidean1.webp" width="" align="" /><img src="tabel/tabel_euclidean.webp" width="" align="" /><p>Selanjutnya mari kita tentukan nilai K (banyak tetangga) yang akan kita gunakan. Mari gunakan nilai K = 3, lalu kita identifikasi jarak tetangga ke-3 dari masing-masing data.</p>
+<img src="tabel/tabel_tetangga3_1.webp" width="" align="" /><img src="tabel/tabel_tetangga3_2.webp" width="" align="" /><ol class="arabic simple" start="2">
 <li><p>Menghitung Reachability Distance (RD)</p></li>
 </ol>
 <p>Selanjutnya kita hitung nilai Reachability Distance dari masing-masing objek. Tapi sebelum itu kita harus menentukan berapa banyak objek yang masuk ke dalam ruang lingkup tetangga ke-n dari suatu objek. Secara matematis bisa dituliskan seperti di bawah ini :</p>
 <p>k-distance neighborhood of o, Nk(o) = {o’| o’ in D, dist(o, o’) ≤ distk(o)}</p>
 <p>Yang dimana nilai dari Nk(o) akan lebih besar atau sama dengan nilai K</p>
 <p>Untuk contohnya pada objek a memiliki nilai jarak tetangga ke-3 yaitu 1,414214, berarti objek lain yang masuk ke dalam lingkupnya yaitu yang nilainya kurang atau sama dengan 1,414214 yang berarti berisikan {b, c, f}. Mari kita lakukan untuk objek yang lain.</p>
-<img src="gambar/tabel_n.webp" width="" align="" /><p>Selanjutnya hitung Reachability Distance dari maring-masing objek, untuk rumusnya yaitu :</p>
-<img src="gambar/rd.webp" width="50%" align="" /><p>Sebagai contoh objek a, objek a memiliki 3 tetangga terdekat yaitu {b, c, f} kita lakukan perhitungan terhadap masing-masing objek, dengan memilih nilai terbesar dari perbandingan jarak tetangga ke-3 dari objek dengan jarak objek ke objek lain:</p>
+<img src="tabel/tabel_n.webp" width="" align="" /><p>Selanjutnya hitung Reachability Distance dari maring-masing objek, untuk rumusnya yaitu :</p>
+<img src="Gambar/rd.webp" width="50%" align="" /><p>Sebagai contoh objek a, objek a memiliki 3 tetangga terdekat yaitu {b, c, f} kita lakukan perhitungan terhadap masing-masing objek, dengan memilih nilai terbesar dari perbandingan jarak tetangga ke-3 dari objek dengan jarak objek ke objek lain:</p>
 <p>reachdist3(b&lt;-a) = max{dist3(b), dist(b,a)}</p>
 <p>reachdist3(b&lt;-a) = max(1, 1)</p>
 <p>reachdist3(b&lt;-a) =1</p>
 <p>Mari kita lakukan untuk keseluruhan objek</p>
-<img src="gambar/tabel_rd_1.webp" width="" align="" /><img src="gambar/tabel_rd_2.webp" width="" align="" /><ol class="arabic simple" start="3">
+<img src="tabel/tabel_rd_1.webp" width="" align="" /><img src="tabel/tabel_rd_2.webp" width="" align="" /><ol class="arabic simple" start="3">
 <li><p>Menghitung Local Reachability Distance (LRD)</p></li>
 </ol>
 <p>Selanjutnya melakukan perhitungan Local Reachability Distance (LRD), LRD dirumuskan seperti di bawah ini :</p>
-<img src="gambar/image-20240320-015046.png" width="50%" align="" /><p>Berdasarkan rumus diatas bisa dideskripsikan bahwa LRD merupakan hasil dari pembagian banyak jumlah tetangga ke-n dari suatu objek dibagi dengan total dari reachdistance ability objek tersebut.</p>
+<img src="Gambar/image-20240320-015046.png" width="50%" align="" /><p>Berdasarkan rumus diatas bisa dideskripsikan bahwa LRD merupakan hasil dari pembagian banyak jumlah tetangga ke-n dari suatu objek dibagi dengan total dari reachdistance ability objek tersebut.</p>
 <p>Sehinga jika dilakukan perhitungan untuk setiap objek didapatkan hasil</p>
-<img src="gambar/image-20240320-020236.png" width="" align="" /><ol class="arabic simple" start="4">
+<img src="tabel/image-20240320-020236.png" width="" align="" /><ol class="arabic simple" start="4">
 <li><p>Menghitung Local Outlier Factor (LOF)</p></li>
 </ol>
 <p>Selanjutnya yang terakhir yaitu menghitung Local Outlier Factor (LOF), dirumuskan sebagai berikut :</p>
-<img src="gambar/image-20240320-020521.png" width="75%" align="" /><p>Berdasarkan rumus diatas diketahui jika LOF didapat dari hasil perkalian jumlah nilai lrd suatu objek dikali dengan jumlah reachability distance suatu objek.</p>
+<img src="Gambar/image-20240320-020521.png" width="75%" align="" /><p>Berdasarkan rumus diatas diketahui jika LOF didapat dari hasil perkalian jumlah nilai lrd suatu objek dikali dengan jumlah reachability distance suatu objek.</p>
 <p>Sehinga jika dilakukan perhitungan untuk setiap objek didapatkan hasil</p>
-<img src="gambar/image-20240320-021026.png" width="" align="" /><p>Dari hasil diatas bisa ditemukan bahwa nilai lof e menyimpang dikarenakan perbedaan yang terlalu jauh dengan objek yang lain, sehingga bisa disimpulkan bahwa terdapat outlier pada baris e.</p>
+<img src="tabel/image-20240320-021026.png" width="" align="" /><p>Dari hasil diatas bisa ditemukan bahwa nilai lof e menyimpang dikarenakan perbedaan yang terlalu jauh dengan objek yang lain, sehingga bisa disimpulkan bahwa terdapat outlier pada baris e.</p>
 </section>
 <section id="menghitung-menggunakan-python-sckit-learn">
 <h3>Menghitung Menggunakan Python (sckit-learn)<a class="headerlink" href="#menghitung-menggunakan-python-sckit-learn" title="Link to this heading">#</a></h3>
@@ -2146,7 +2062,7 @@ Negative LOF scores: [1.         1.         1.         1.57580136 4.74490554 0.9
 <p>Sebelum itu, mari kita tambahkan beberapa outlier ke iris dataset kita</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_15</span> <span class="o">=</span> <span class="n">_deepnote_execute_sql</span><span class="p">(</span><span class="s1">&#39;UPDATE iris.iris_dataset_lof SET SepalLengthCm = 10 WHERE Id IN (3, 6, 9)&#39;</span><span class="p">,</span> <span class="s1">&#39;SQL_4BD01A4F_9F01_4CE8_9254_60CF462F2AD1&#39;</span><span class="p">,</span> <span class="n">audit_sql_comment</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">sql_cache_mode</span><span class="o">=</span><span class="s1">&#39;cache_disabled&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_15</span> <span class="o">=</span> <span class="n">_deepnote_execute_sql</span><span class="p">(</span><span class="s1">&#39;UPDATE iris.iris_dataset_lof SET SepalLengthCm = 15 WHERE Id IN (6, 9)&#39;</span><span class="p">,</span> <span class="s1">&#39;SQL_4BD01A4F_9F01_4CE8_9254_60CF462F2AD1&#39;</span><span class="p">,</span> <span class="n">audit_sql_comment</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">sql_cache_mode</span><span class="o">=</span><span class="s1">&#39;cache_disabled&#39;</span><span class="p">)</span>
 <span class="n">df_15</span>
 </pre></div>
 </div>
@@ -2154,7 +2070,7 @@ Negative LOF scores: [1.         1.         1.         1.57580136 4.74490554 0.9
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_17</span> <span class="o">=</span> <span class="n">_deepnote_execute_sql</span><span class="p">(</span><span class="s1">&#39;UPDATE iris.iris_dataset_lof SET SepalWidthCm = 10 WHERE Id IN (4, 8, 12)&#39;</span><span class="p">,</span> <span class="s1">&#39;SQL_4BD01A4F_9F01_4CE8_9254_60CF462F2AD1&#39;</span><span class="p">,</span> <span class="n">audit_sql_comment</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">sql_cache_mode</span><span class="o">=</span><span class="s1">&#39;cache_disabled&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_17</span> <span class="o">=</span> <span class="n">_deepnote_execute_sql</span><span class="p">(</span><span class="s1">&#39;UPDATE iris.iris_dataset_lof SET SepalWidthCm = 15 WHERE Id IN (4, 8, 12)&#39;</span><span class="p">,</span> <span class="s1">&#39;SQL_4BD01A4F_9F01_4CE8_9254_60CF462F2AD1&#39;</span><span class="p">,</span> <span class="n">audit_sql_comment</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">sql_cache_mode</span><span class="o">=</span><span class="s1">&#39;cache_disabled&#39;</span><span class="p">)</span>
 <span class="n">df_17</span>
 </pre></div>
 </div>
@@ -2163,7 +2079,7 @@ Negative LOF scores: [1.         1.         1.         1.57580136 4.74490554 0.9
 <p>Mari kita cek hasil perubahannya</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_16</span> <span class="o">=</span> <span class="n">_deepnote_execute_sql</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM iris.iris_dataset_lof WHERE Id IN (3, 4, 6, 8, 9, 12)&#39;</span><span class="p">,</span> <span class="s1">&#39;SQL_4BD01A4F_9F01_4CE8_9254_60CF462F2AD1&#39;</span><span class="p">,</span> <span class="n">audit_sql_comment</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">sql_cache_mode</span><span class="o">=</span><span class="s1">&#39;cache_disabled&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_16</span> <span class="o">=</span> <span class="n">_deepnote_execute_sql</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM iris.iris_dataset_lof WHERE Id IN (4, 6, 8, 9, 12)&#39;</span><span class="p">,</span> <span class="s1">&#39;SQL_4BD01A4F_9F01_4CE8_9254_60CF462F2AD1&#39;</span><span class="p">,</span> <span class="n">audit_sql_comment</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">sql_cache_mode</span><span class="o">=</span><span class="s1">&#39;cache_disabled&#39;</span><span class="p">)</span>
 <span class="n">df_16</span>
 </pre></div>
 </div>
@@ -2198,57 +2114,118 @@ Negative LOF scores: [1.         1.         1.         1.57580136 4.74490554 0.9
   <tbody>
     <tr>
       <th>0</th>
-      <td>3</td>
-      <td>10.0</td>
-      <td>3.2</td>
-      <td>1.3</td>
-      <td>0.2</td>
-      <td>Iris-setosa</td>
-    </tr>
-    <tr>
-      <th>1</th>
       <td>4</td>
       <td>4.6</td>
-      <td>10.0</td>
+      <td>15.0</td>
       <td>1.5</td>
       <td>0.2</td>
       <td>Iris-setosa</td>
     </tr>
     <tr>
-      <th>2</th>
+      <th>1</th>
       <td>6</td>
-      <td>10.0</td>
+      <td>15.0</td>
       <td>3.9</td>
       <td>1.7</td>
       <td>0.4</td>
       <td>Iris-setosa</td>
     </tr>
     <tr>
-      <th>3</th>
+      <th>2</th>
       <td>8</td>
       <td>5.0</td>
-      <td>10.0</td>
+      <td>15.0</td>
       <td>1.5</td>
       <td>0.2</td>
       <td>Iris-setosa</td>
     </tr>
     <tr>
-      <th>4</th>
+      <th>3</th>
       <td>9</td>
-      <td>10.0</td>
+      <td>15.0</td>
       <td>2.9</td>
       <td>1.4</td>
       <td>0.2</td>
       <td>Iris-setosa</td>
     </tr>
     <tr>
-      <th>5</th>
+      <th>4</th>
       <td>12</td>
       <td>4.8</td>
-      <td>10.0</td>
+      <td>15.0</td>
       <td>1.6</td>
       <td>0.2</td>
       <td>Iris-setosa</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_18</span> <span class="o">=</span> <span class="n">_deepnote_execute_sql</span><span class="p">(</span><span class="s1">&#39;WITH DataWithZScore AS (</span><span class="se">\n</span><span class="s1">    SELECT</span><span class="se">\n</span><span class="s1">        *,</span><span class="se">\n</span><span class="s1">        (SepalLengthCm - AVG(SepalLengthCm) OVER ()) / (STDDEV(SepalLengthCm) OVER ()) AS ZScore</span><span class="se">\n</span><span class="s1">    FROM</span><span class="se">\n</span><span class="s1">        iris.iris_dataset_lof</span><span class="se">\n</span><span class="s1">)</span><span class="se">\n</span><span class="s1">SELECT</span><span class="se">\n</span><span class="s1">    *</span><span class="se">\n</span><span class="s1">FROM</span><span class="se">\n</span><span class="s1">    DataWithZScore</span><span class="se">\n</span><span class="s1">WHERE</span><span class="se">\n</span><span class="s1">    ABS(ZScore) &gt; 3;&#39;</span><span class="p">,</span> <span class="s1">&#39;SQL_4BD01A4F_9F01_4CE8_9254_60CF462F2AD1&#39;</span><span class="p">,</span> <span class="n">audit_sql_comment</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">sql_cache_mode</span><span class="o">=</span><span class="s1">&#39;cache_disabled&#39;</span><span class="p">)</span>
+<span class="n">df_18</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Id</th>
+      <th>SepalLengthCm</th>
+      <th>SepalWidthCm</th>
+      <th>PetalLengthCm</th>
+      <th>PetalWidthCm</th>
+      <th>Species</th>
+      <th>ZScore</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3</td>
+      <td>15.0</td>
+      <td>3.2</td>
+      <td>1.3</td>
+      <td>0.2</td>
+      <td>Iris-setosa</td>
+      <td>5.912973</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>6</td>
+      <td>15.0</td>
+      <td>3.9</td>
+      <td>1.7</td>
+      <td>0.4</td>
+      <td>Iris-setosa</td>
+      <td>5.912973</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>9</td>
+      <td>15.0</td>
+      <td>2.9</td>
+      <td>1.4</td>
+      <td>0.2</td>
+      <td>Iris-setosa</td>
+      <td>5.912973</td>
     </tr>
   </tbody>
 </table>
@@ -2296,32 +2273,54 @@ Negative LOF scores: [1.         1.         1.         1.57580136 4.74490554 0.9
 
 <span class="c1"># Menampilkan data dengan outlier yang diidentifikasi</span>
 <span class="n">outlier_indices</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">label</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">y_pred</span><span class="p">)</span> <span class="k">if</span> <span class="n">label</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">indeks</span> <span class="o">=</span> <span class="p">[</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">outlier_indices</span><span class="p">]</span>
+
 <span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">outlier_indices</span><span class="p">]</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">([</span><span class="n">point</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">point</span> <span class="ow">in</span> <span class="n">x</span><span class="p">],</span> <span class="p">[</span><span class="n">point</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">point</span> <span class="ow">in</span> <span class="n">x</span><span class="p">])</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">([</span><span class="n">point</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">point</span> <span class="ow">in</span> <span class="n">values</span><span class="p">],</span> <span class="p">[</span><span class="n">point</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">point</span> <span class="ow">in</span> <span class="n">values</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Outlier ditemukan pada baris : </span><span class="si">{</span><span class="n">indeks</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">confusion_matrix</span><span class="p">,</span> <span class="n">accuracy_score</span>
+
+<span class="c1"># Label outlier yang sebenarnya, asumsi data terakhir adalah outlier</span>
+<span class="n">true_labels</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">idx</span> <span class="ow">in</span> <span class="n">outlier_indices</span><span class="p">:</span>
+    <span class="n">true_labels</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+
+<span class="c1"># Mengevaluasi kinerja model</span>
+<span class="n">conf_matrix</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">true_labels</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+<span class="n">accuracy</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">true_labels</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Confusion Matrix:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">conf_matrix</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Accuracy: </span><span class="si">{</span><span class="n">accuracy</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting mysql-connector-python
-  Downloading mysql_connector_python-8.3.0-cp39-cp39-manylinux_2_17_x86_64.whl (21.5 MB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">21.5/21.5 MB</span> <span class=" -Color -Color-Red">47.8 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
-?25hInstalling collected packages: mysql-connector-python
-Successfully installed mysql-connector-python-8.3.0
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: mysql-connector-python in /root/venv/lib/python3.9/site-packages (8.3.0)
 
 <span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> A new release of pip is available: <span class=" -Color -Color-Red">23.0.1</span> -&gt; <span class=" -Color -Color-Green">24.0</span>
 <span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> To update, run: <span class=" -Color -Color-Green">pip install --upgrade pip</span>
 </pre></div>
 </div>
-<img alt="gambar/graph-5.png" src="gambar/graph-5.png" />
+<img alt="_images/751acb6aaf0e68dea99762bc7530115bb6f3194601df5cca5f862625ceef9db9.png" src="_images/751acb6aaf0e68dea99762bc7530115bb6f3194601df5cca5f862625ceef9db9.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Outlier ditemukan pada baris : [4, 6, 8, 9, 12]
+Confusion Matrix:
+[[  5   0]
+ [  0 145]]
+Accuracy: 1.0
+</pre></div>
+</div>
 </div>
 </div>
 <p>Berdasarkan hasil dari graph tersebut dapat diketahui jika outlier diidentifikasi dengan warna merah. Jika diamati outlier yang ditampilkan sebagai warna merah di sumbu x yang berbeda di sumbu y, ini menunjukkan bahwa ketiga titik tersebut mungkin memiliki nilai yang jauh dari nilai rata-rata atau mayoritas pada sumbu x, namun nilai mereka di sumbu y tidak selalu memiliki pola yang sama. Artinya, outlier-outlier ini mungkin terletak pada posisi yang ekstrem pada sumbu x, tetapi tidak pada sumbu y. yang dimana sumbu x adalah kolom SepalLengthCm dan sumbu y adalah kolom SepalWidthCm.</p>
 </section>
 <section id="data-integration">
-<h3>3.2 Data Integration<a class="headerlink" href="#data-integration" title="Link to this heading">#</a></h3>
+<h3>2.2 Data Integration<a class="headerlink" href="#data-integration" title="Link to this heading">#</a></h3>
 <p>Karena data preprocessing akan menggabungkan beberapa data dalam suatu dataset, maka Anda harus mengecek data-data yang datang dari berbagai sumber tersebut supaya memiliki format yang sama. Proses ini menjadi salah satu step penting dalam proses ini.</p>
 <p>Beberapa permasalahan bisa muncul ketika melakukan data integration. Misalnya, Anda ingin menggabungkan data dari beberapa sumber. Anda harus mengetahui bahwa data pada sumber pertama dimiliki oleh si A, dan data pada sumber kedua juga terkait dengan si A. Kelihatannya seperti hal mudah, padahal dua sumber tersebut memiliki format yang berbeda. Itulah yang membuat data integration sedikit lebih rumit.</p>
 <p>Mengambil data dari banyak sumber (MySql dan PostgreSql)</p>
@@ -2452,11 +2451,258 @@ Successfully installed mysql-connector-python-8.3.0
 </div>
 </div>
 </div>
+</section>
+</section>
+<section id="klasifikasi-gaussian-naive-bayes">
+<h2>Klasifikasi Gaussian Naive Bayes<a class="headerlink" href="#klasifikasi-gaussian-naive-bayes" title="Link to this heading">#</a></h2>
+<p>Gaussian Naive Bayes merupakan sebuah teknik klasifikasi yang digunakan dalam machine learning dengan menggunakan metode probability dan Distribusi Gaussian atau Distiribusi Normal. Gaussian Distribution mengasumsikan bahwa setiap feature pada data memiliki penngaruh yang independent dalam memprediksi target. Kombinasi prediksi dari seluruh parameter adalah prediksi akhir dengan probability dari target variable yang diklasifikasikan ke dalam dua kelas. Klasifikasi akhirnya adalah hasil probability yang lebih tinggi dari grup target.</p>
+<img src="image-20240403-191832.png" width="" align="" /><p>Dapat dituliskan dengan : Posterior = Likelihood x Priority / Evidence, Untuk Likelihood bisa didapat menggunakan rumus gaussian</p>
+<img src="image-20240403-192037.png" width="" align="" /></section>
+<section id="menggunakan-code">
+<h2>Menggunakan Code<a class="headerlink" href="#menggunakan-code" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>mysql-connector-python<span class="w">  </span>#<span class="w"> </span>untuk<span class="w"> </span>install<span class="w"> </span>module<span class="w"> </span>mysql<span class="w"> </span>connector,<span class="w"> </span>uncomment<span class="w"> </span>untuk<span class="w"> </span>install
+<span class="kn">import</span> <span class="nn">mysql.connector</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="kn">import</span> <span class="n">GaussianNB</span>
+
+<span class="c1"># Informasi koneksi ke database MySQL di cloud aiven</span>
+<span class="n">hostname</span> <span class="o">=</span> <span class="s1">&#39;database2-bagus22081.a.aivencloud.com&#39;</span>
+<span class="n">port</span> <span class="o">=</span> <span class="mi">24084</span>
+<span class="n">username</span> <span class="o">=</span> <span class="s1">&#39;avnadmin&#39;</span>
+<span class="n">password</span> <span class="o">=</span> <span class="s1">&#39;AVNS_e2gyqyxIQVG7Vqu7BrF&#39;</span>
+<span class="n">database</span> <span class="o">=</span> <span class="s1">&#39;iris&#39;</span>
+
+<span class="c1"># Membuat koneksi ke database MySQL</span>
+<span class="n">conn</span> <span class="o">=</span> <span class="n">mysql</span><span class="o">.</span><span class="n">connector</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span>
+    <span class="n">host</span><span class="o">=</span><span class="n">hostname</span><span class="p">,</span>
+    <span class="n">port</span><span class="o">=</span><span class="n">port</span><span class="p">,</span>
+    <span class="n">user</span><span class="o">=</span><span class="n">username</span><span class="p">,</span>
+    <span class="n">password</span><span class="o">=</span><span class="n">password</span><span class="p">,</span>
+    <span class="n">database</span><span class="o">=</span><span class="n">database</span>
+<span class="p">)</span>
+
+<span class="c1"># Membaca data dari database menggunakan Pandas</span>
+<span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;SELECT * FROM iris_dataset_pure&quot;</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">conn</span><span class="p">)</span>
+
+<span class="c1"># Menutup koneksi ke database</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="c1"># Memisahkan fitur dan target</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Species&#39;</span><span class="p">,</span> <span class="s1">&#39;Id&#39;</span><span class="p">])</span>  <span class="c1"># Fitur</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;Species&#39;</span><span class="p">]</span>  <span class="c1"># Target</span>
+
+<span class="c1"># Membagi data menjadi data latih dan data uji</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">,</span> <span class="n">Y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;================== DATA X_train ==================&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;================== DATA X_test ==================&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;================== DATA Y_train ==================&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Y_train</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;================== DATA Y_test ==================&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="n">combined_train</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;================== DATA combine ==================&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">combined_train</span><span class="p">)</span>
+<span class="n">combined_train</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;combined_data.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">X_test</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;x_test.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># Inisialisasi dan melatih model klasifikasi Naive Bayes</span>
+<span class="n">clf</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
+<span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">)</span>
+
+<span class="c1"># Melakukan prediksi pada data uji</span>
+<span class="n">predictions</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="c1"># Menampilkan akurasi model</span>
+<span class="n">accuracy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">predictions</span> <span class="o">==</span> <span class="n">Y_test</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Akurasi:&quot;</span><span class="p">,</span> <span class="n">accuracy</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">predicted_class</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">predictions</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data baru ke-&quot;</span><span class="p">,</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;kelas yang diprediksi:&quot;</span><span class="p">,</span> <span class="n">predicted_class</span><span class="p">)</span>
+
+<span class="c1"># # Data baru tanpa label kelas</span>
+<span class="c1"># new_data = np.array([[5.1, 3.5, 1.4, 0.2], [7, 3.2, 4.7, 1.4], [7.2, 3.6, 6.1, 2.5]])</span>
+
+<span class="c1"># # Melakukan prediksi pada data baru</span>
+<span class="c1"># predicted_classes = clf.predict(new_data)</span>
+
+<span class="c1"># # Menampilkan hasil prediksi</span>
+<span class="c1"># for i, predicted_class in enumerate(predicted_classes):</span>
+<span class="c1">#     print(&quot;Data baru ke-&quot;, i+1, &quot;kelas yang diprediksi:&quot;, predicted_class)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: mysql-connector-python in /root/venv/lib/python3.9/site-packages (8.3.0)
+
+<span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> A new release of pip is available: <span class=" -Color -Color-Red">23.0.1</span> -&gt; <span class=" -Color -Color-Green">24.0</span>
+<span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> To update, run: <span class=" -Color -Color-Green">pip install --upgrade pip</span>
+/tmp/ipykernel_44/1785679738.py:26: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  dataset = pd.read_sql(query, conn)
+================== DATA X_train ==================
+     SepalLengthCm  SepalWidthCm  PetalLengthCm  PetalWidthCm
+22             4.6           3.6            1.0           0.2
+15             5.7           4.4            1.5           0.4
+65             6.7           3.1            4.4           1.4
+11             4.8           3.4            1.6           0.2
+42             4.4           3.2            1.3           0.2
+..             ...           ...            ...           ...
+71             6.1           2.8            4.0           1.3
+106            4.9           2.5            4.5           1.7
+14             5.8           4.0            1.2           0.2
+92             5.8           2.6            4.0           1.2
+102            7.1           3.0            5.9           2.1
+
+[120 rows x 4 columns]
+================== DATA X_test ==================
+     SepalLengthCm  SepalWidthCm  PetalLengthCm  PetalWidthCm
+73             6.1           2.8            4.7           1.2
+18             5.7           3.8            1.7           0.3
+118            7.7           2.6            6.9           2.3
+78             6.0           2.9            4.5           1.5
+76             6.8           2.8            4.8           1.4
+31             5.4           3.4            1.5           0.4
+64             5.6           2.9            3.6           1.3
+141            6.9           3.1            5.1           2.3
+68             6.2           2.2            4.5           1.5
+82             5.8           2.7            3.9           1.2
+110            6.5           3.2            5.1           2.0
+12             4.8           3.0            1.4           0.1
+36             5.5           3.5            1.3           0.2
+9              4.9           3.1            1.5           0.1
+19             5.1           3.8            1.5           0.3
+56             6.3           3.3            4.7           1.6
+104            6.5           3.0            5.8           2.2
+69             5.6           2.5            3.9           1.1
+55             5.7           2.8            4.5           1.3
+132            6.4           2.8            5.6           2.2
+29             4.7           3.2            1.6           0.2
+127            6.1           3.0            4.9           1.8
+26             5.0           3.4            1.6           0.4
+128            6.4           2.8            5.6           2.1
+131            7.9           3.8            6.4           2.0
+145            6.7           3.0            5.2           2.3
+108            6.7           2.5            5.8           1.8
+143            6.8           3.2            5.9           2.3
+45             4.8           3.0            1.4           0.3
+30             4.8           3.1            1.6           0.2
+================== DATA Y_train ==================
+22         Iris-setosa
+15         Iris-setosa
+65     Iris-versicolor
+11         Iris-setosa
+42         Iris-setosa
+            ...       
+71     Iris-versicolor
+106     Iris-virginica
+14         Iris-setosa
+92     Iris-versicolor
+102     Iris-virginica
+Name: Species, Length: 120, dtype: object
+================== DATA Y_test ==================
+     SepalLengthCm  SepalWidthCm  PetalLengthCm  PetalWidthCm
+73             6.1           2.8            4.7           1.2
+18             5.7           3.8            1.7           0.3
+118            7.7           2.6            6.9           2.3
+78             6.0           2.9            4.5           1.5
+76             6.8           2.8            4.8           1.4
+31             5.4           3.4            1.5           0.4
+64             5.6           2.9            3.6           1.3
+141            6.9           3.1            5.1           2.3
+68             6.2           2.2            4.5           1.5
+82             5.8           2.7            3.9           1.2
+110            6.5           3.2            5.1           2.0
+12             4.8           3.0            1.4           0.1
+36             5.5           3.5            1.3           0.2
+9              4.9           3.1            1.5           0.1
+19             5.1           3.8            1.5           0.3
+56             6.3           3.3            4.7           1.6
+104            6.5           3.0            5.8           2.2
+69             5.6           2.5            3.9           1.1
+55             5.7           2.8            4.5           1.3
+132            6.4           2.8            5.6           2.2
+29             4.7           3.2            1.6           0.2
+127            6.1           3.0            4.9           1.8
+26             5.0           3.4            1.6           0.4
+128            6.4           2.8            5.6           2.1
+131            7.9           3.8            6.4           2.0
+145            6.7           3.0            5.2           2.3
+108            6.7           2.5            5.8           1.8
+143            6.8           3.2            5.9           2.3
+45             4.8           3.0            1.4           0.3
+30             4.8           3.1            1.6           0.2
+================== DATA combine ==================
+     SepalLengthCm  SepalWidthCm  PetalLengthCm  PetalWidthCm          Species
+22             4.6           3.6            1.0           0.2      Iris-setosa
+15             5.7           4.4            1.5           0.4      Iris-setosa
+65             6.7           3.1            4.4           1.4  Iris-versicolor
+11             4.8           3.4            1.6           0.2      Iris-setosa
+42             4.4           3.2            1.3           0.2      Iris-setosa
+..             ...           ...            ...           ...              ...
+71             6.1           2.8            4.0           1.3  Iris-versicolor
+106            4.9           2.5            4.5           1.7   Iris-virginica
+14             5.8           4.0            1.2           0.2      Iris-setosa
+92             5.8           2.6            4.0           1.2  Iris-versicolor
+102            7.1           3.0            5.9           2.1   Iris-virginica
+
+[120 rows x 5 columns]
+Akurasi: 1.0
+Data baru ke- 1 kelas yang diprediksi: Iris-versicolor
+Data baru ke- 2 kelas yang diprediksi: Iris-setosa
+Data baru ke- 3 kelas yang diprediksi: Iris-virginica
+Data baru ke- 4 kelas yang diprediksi: Iris-versicolor
+Data baru ke- 5 kelas yang diprediksi: Iris-versicolor
+Data baru ke- 6 kelas yang diprediksi: Iris-setosa
+Data baru ke- 7 kelas yang diprediksi: Iris-versicolor
+Data baru ke- 8 kelas yang diprediksi: Iris-virginica
+Data baru ke- 9 kelas yang diprediksi: Iris-versicolor
+Data baru ke- 10 kelas yang diprediksi: Iris-versicolor
+Data baru ke- 11 kelas yang diprediksi: Iris-virginica
+Data baru ke- 12 kelas yang diprediksi: Iris-setosa
+Data baru ke- 13 kelas yang diprediksi: Iris-setosa
+Data baru ke- 14 kelas yang diprediksi: Iris-setosa
+Data baru ke- 15 kelas yang diprediksi: Iris-setosa
+Data baru ke- 16 kelas yang diprediksi: Iris-versicolor
+Data baru ke- 17 kelas yang diprediksi: Iris-virginica
+Data baru ke- 18 kelas yang diprediksi: Iris-versicolor
+Data baru ke- 19 kelas yang diprediksi: Iris-versicolor
+Data baru ke- 20 kelas yang diprediksi: Iris-virginica
+Data baru ke- 21 kelas yang diprediksi: Iris-setosa
+Data baru ke- 22 kelas yang diprediksi: Iris-virginica
+Data baru ke- 23 kelas yang diprediksi: Iris-setosa
+Data baru ke- 24 kelas yang diprediksi: Iris-virginica
+Data baru ke- 25 kelas yang diprediksi: Iris-virginica
+Data baru ke- 26 kelas yang diprediksi: Iris-virginica
+Data baru ke- 27 kelas yang diprediksi: Iris-virginica
+Data baru ke- 28 kelas yang diprediksi: Iris-virginica
+Data baru ke- 29 kelas yang diprediksi: Iris-setosa
+Data baru ke- 30 kelas yang diprediksi: Iris-setosa
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="hitung-manual">
+<h2>Hitung Manual<a class="headerlink" href="#hitung-manual" title="Link to this heading">#</a></h2>
+<p>Menggunakan data testing diatas yang didapat dari 20% dari keseluruh iris dataset (150 data) yang diambil secara random.</p>
+<img src="image-20240424-204927.png" width="" align="" /><p>Sebagai contoh untuk membuktikan perhitungan mari kita ambil satu data dari data testing</p>
+<img src="image-20240424-211148.png" width="75%" align="" /><p>Selanjutnya lakukan perhitungan rata-rata dan standar deviasi untuk setiap class di data trainingnya</p>
+<img src="image-20240424-205808.png" width="75%" align="" /><img src="image-20240424-205834.png" width="75%" align="" /><img src="image-20240424-205856.png" width="75%" align="" /><p>Mari kita buktikan jika data yang kita testing akan diprediksi masuk class setosa</p>
+<p>mari kita hitung nilai gaussian dan likelihood dari setiap class</p>
+<img src="image-20240424-211220.png" width="75%" align="" /><img src="image-20240424-211241.png" width="75%" align="" /><img src="image-20240424-211456.png" width="75%" align="" /><p>Selanjutnya hitung nilai posterior dari masing-masing class, nilai posterior didapat dari likelihood x priority. Untuk prioritynya setiap class didapat dari jumlah data setiap class / total keseluruhan data training,</p>
+<img src="image-20240424-210340.png" width="75%" align="" /><img src="image-20240424-210413.png" width="75%" align="" /><img src="image-20240424-210428.png" width="75%" align="" /><img src="image-20240424-211625.png" width="50%" align="" /><img src="image-20240424-211658.png" width="50%" align="" /><img src="image-20240424-211719.png" width="50%" align="" /><p>Berdasarkan nilai diatas nilai posterior dari setosa yang paling besar sehingga dapat disimpulkan data yang kita test diprediksi masuk ke dalam class Setosa. Dari perhitungan diatas dapat dibuktikan bahwa perhitungan dari kode sudah benar</p>
 <p>========================================== SEKIAN TERIMA KASIH =========================================</p>
 <a style='text-decoration:none;line-height:16px;display:flex;color:#5B5B62;padding:10px;justify-content:end;' href='https://deepnote.com?utm_source=created-in-deepnote-cell&projectId=5adff241-3cd0-45b3-912e-896625acc0fc' target="_blank">
 <img alt='Created in deepnote.com' style='display:inline;max-height:16px;margin:0px;margin-right:7.5px;' src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iODBweCIgaGVpZ2h0PSI4MHB4IiB2aWV3Qm94PSIwIDAgODAgODAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDU0LjEgKDc2NDkwKSAtIGh0dHBzOi8vc2tldGNoYXBwLmNvbSAtLT4KICAgIDx0aXRsZT5Hcm91cCAzPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGcgaWQ9IkxhbmRpbmciIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJBcnRib2FyZCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEyMzUuMDAwMDAwLCAtNzkuMDAwMDAwKSI+CiAgICAgICAgICAgIDxnIGlkPSJHcm91cC0zIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMjM1LjAwMDAwMCwgNzkuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICA8cG9seWdvbiBpZD0iUGF0aC0yMCIgZmlsbD0iIzAyNjVCNCIgcG9pbnRzPSIyLjM3NjIzNzYyIDgwIDM4LjA0NzY2NjcgODAgNTcuODIxNzgyMiA3My44MDU3NTkyIDU3LjgyMTc4MjIgMzIuNzU5MjczOSAzOS4xNDAyMjc4IDMxLjY4MzE2ODMiPjwvcG9seWdvbj4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0zNS4wMDc3MTgsODAgQzQyLjkwNjIwMDcsNzYuNDU0OTM1OCA0Ny41NjQ5MTY3LDcxLjU0MjI2NzEgNDguOTgzODY2LDY1LjI2MTk5MzkgQzUxLjExMjI4OTksNTUuODQxNTg0MiA0MS42NzcxNzk1LDQ5LjIxMjIyODQgMjUuNjIzOTg0Niw0OS4yMTIyMjg0IEMyNS40ODQ5Mjg5LDQ5LjEyNjg0NDggMjkuODI2MTI5Niw0My4yODM4MjQ4IDM4LjY0NzU4NjksMzEuNjgzMTY4MyBMNzIuODcxMjg3MSwzMi41NTQ0MjUgTDY1LjI4MDk3Myw2Ny42NzYzNDIxIEw1MS4xMTIyODk5LDc3LjM3NjE0NCBMMzUuMDA3NzE4LDgwIFoiIGlkPSJQYXRoLTIyIiBmaWxsPSIjMDAyODY4Ij48L3BhdGg+CiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMCwzNy43MzA0NDA1IEwyNy4xMTQ1MzcsMC4yNTcxMTE0MzYgQzYyLjM3MTUxMjMsLTEuOTkwNzE3MDEgODAsMTAuNTAwMzkyNyA4MCwzNy43MzA0NDA1IEM4MCw2NC45NjA0ODgyIDY0Ljc3NjUwMzgsNzkuMDUwMzQxNCAzNC4zMjk1MTEzLDgwIEM0Ny4wNTUzNDg5LDc3LjU2NzA4MDggNTMuNDE4MjY3Nyw3MC4zMTM2MTAzIDUzLjQxODI2NzcsNTguMjM5NTg4NSBDNTMuNDE4MjY3Nyw0MC4xMjg1NTU3IDM2LjMwMzk1NDQsMzcuNzMwNDQwNSAyNS4yMjc0MTcsMzcuNzMwNDQwNSBDMTcuODQzMDU4NiwzNy43MzA0NDA1IDkuNDMzOTE5NjYsMzcuNzMwNDQwNSAwLDM3LjczMDQ0MDUgWiIgaWQ9IlBhdGgtMTkiIGZpbGw9IiMzNzkzRUYiPjwvcGF0aD4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+' > </img>
 Created in <span style='font-weight:600;margin-left:4px;'>Deepnote</span></a></section>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -2489,24 +2735,6 @@ Created in <span style='font-weight:600;margin-left:4px;'>Deepnote</span></a></s
                 <footer class="prev-next-footer">
                   
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="markdown.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Markdown Files</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="markdown-notebooks.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Notebooks with MyST Markdown</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
@@ -2530,14 +2758,8 @@ Created in <span style='font-weight:600;margin-left:4px;'>Deepnote</span></a></s
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deskripsi-statistik-sederhana">1.2 Deskripsi Statistik Sederhana</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualisasi-data">2. Visualisasi Data</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parallel-coordinates">2.1 Parallel Coordinates</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#andrews-curves">2.2 Andrews Curves</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pairplot">2.3 Pairplot</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing-data">3. Preprocessing Data</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-cleaning">3.1 Data Cleaning</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing-data">2. Preprocessing Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-cleaning">2.1 Data Cleaning</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penanganan-missing-values-dengan-menggunakan-metode-mean">- Penanganan Missing Values dengan menggunakan metode Mean</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#penanganan-missing-values-dengan-menggunakan-metode-knn-k-nearest-neighbors">- Penanganan Missing Values dengan menggunakan metode KNN (K-Nearest Neighbors)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deteksi-outlier-local-outlier-factor">- Deteksi Outlier (Local Outlier Factor)</a></li>
@@ -2545,9 +2767,12 @@ Created in <span style='font-weight:600;margin-left:4px;'>Deepnote</span></a></s
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-manual-local-outlier-factor-lof">Menghitung Manual Local Outlier Factor (LOF)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#menghitung-menggunakan-python-sckit-learn">Menghitung Menggunakan Python (sckit-learn)</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#implementasi-pada-dataset-iris">Implementasi Pada Dataset Iris</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-integration">3.2 Data Integration</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-integration">2.2 Data Integration</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#klasifikasi-gaussian-naive-bayes">Klasifikasi Gaussian Naive Bayes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#menggunakan-code">Menggunakan Code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hitung-manual">Hitung Manual</a></li>
 </ul>
 </li>
 </ul>
