@@ -1720,7 +1720,7 @@ dtype: int64
 Accuracy of our model is equal 100.0 %.
 </pre></div>
 </div>
-<img alt="_images/e3e00d886a43d40c918d6c3f6d8705480b38d0cbe50baf575757c1016e619d10.png" src="_images/e3e00d886a43d40c918d6c3f6d8705480b38d0cbe50baf575757c1016e619d10.png" />
+<img alt="gambar/e3e00d886a43d40c918d6c3f6d8705480b38d0cbe50baf575757c1016e619d10.png" src="gambar/e3e00d886a43d40c918d6c3f6d8705480b38d0cbe50baf575757c1016e619d10.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The optimal number of neighbors is 13.
 </pre></div>
 </div>
@@ -2307,7 +2307,7 @@ Negative LOF scores: [1.         1.         1.         1.57580136 4.74490554 0.9
 <span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> To update, run: <span class=" -Color -Color-Green">pip install --upgrade pip</span>
 </pre></div>
 </div>
-<img alt="_images/751acb6aaf0e68dea99762bc7530115bb6f3194601df5cca5f862625ceef9db9.png" src="_images/751acb6aaf0e68dea99762bc7530115bb6f3194601df5cca5f862625ceef9db9.png" />
+<img alt="gambar/751acb6aaf0e68dea99762bc7530115bb6f3194601df5cca5f862625ceef9db9.png" src="gambar/751acb6aaf0e68dea99762bc7530115bb6f3194601df5cca5f862625ceef9db9.png" />
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Outlier ditemukan pada baris : [4, 6, 8, 9, 12]
 Confusion Matrix:
 [[  5   0]
@@ -2456,8 +2456,8 @@ Accuracy: 1.0
 <section id="klasifikasi-gaussian-naive-bayes">
 <h2>Klasifikasi Gaussian Naive Bayes<a class="headerlink" href="#klasifikasi-gaussian-naive-bayes" title="Link to this heading">#</a></h2>
 <p>Gaussian Naive Bayes merupakan sebuah teknik klasifikasi yang digunakan dalam machine learning dengan menggunakan metode probability dan Distribusi Gaussian atau Distiribusi Normal. Gaussian Distribution mengasumsikan bahwa setiap feature pada data memiliki penngaruh yang independent dalam memprediksi target. Kombinasi prediksi dari seluruh parameter adalah prediksi akhir dengan probability dari target variable yang diklasifikasikan ke dalam dua kelas. Klasifikasi akhirnya adalah hasil probability yang lebih tinggi dari grup target.</p>
-<img src="image-20240403-191832.png" width="" align="" /><p>Dapat dituliskan dengan : Posterior = Likelihood x Priority / Evidence, Untuk Likelihood bisa didapat menggunakan rumus gaussian</p>
-<img src="image-20240403-192037.png" width="" align="" /></section>
+<img src="gambar/image-20240403-191832.png" width="" align="" /><p>Dapat dituliskan dengan : Posterior = Likelihood x Priority / Evidence, Untuk Likelihood bisa didapat menggunakan rumus gaussian</p>
+<img src="gambar/image-20240403-192037.png" width="" align="" /></section>
 <section id="menggunakan-code">
 <h2>Menggunakan Code<a class="headerlink" href="#menggunakan-code" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
@@ -2693,12 +2693,12 @@ Data baru ke- 30 kelas yang diprediksi: Iris-setosa
 <section id="hitung-manual">
 <h2>Hitung Manual<a class="headerlink" href="#hitung-manual" title="Link to this heading">#</a></h2>
 <p>Menggunakan data testing diatas yang didapat dari 20% dari keseluruh iris dataset (150 data) yang diambil secara random.</p>
-<img src="image-20240424-204927.png" width="" align="" /><p>Sebagai contoh untuk membuktikan perhitungan mari kita ambil satu data dari data testing</p>
-<img src="image-20240424-211148.png" width="75%" align="" /><p>Selanjutnya lakukan perhitungan rata-rata dan standar deviasi untuk setiap class di data trainingnya</p>
-<img src="image-20240424-205808.png" width="75%" align="" /><img src="image-20240424-205834.png" width="75%" align="" /><img src="image-20240424-205856.png" width="75%" align="" /><p>Mari kita buktikan jika data yang kita testing akan diprediksi masuk class setosa</p>
+<img src="gambar/image-20240424-204927.png" width="" align="" /><p>Sebagai contoh untuk membuktikan perhitungan mari kita ambil satu data dari data testing</p>
+<img src="gambar/image-20240424-211148.png" width="75%" align="" /><p>Selanjutnya lakukan perhitungan rata-rata dan standar deviasi untuk setiap class di data trainingnya</p>
+<img src="gambar/image-20240424-205808.png" width="75%" align="" /><img src="gambar/image-20240424-205834.png" width="75%" align="" /><img src="gambar/image-20240424-205856.png" width="75%" align="" /><p>Mari kita buktikan jika data yang kita testing akan diprediksi masuk class setosa</p>
 <p>mari kita hitung nilai gaussian dan likelihood dari setiap class</p>
-<img src="image-20240424-211220.png" width="75%" align="" /><img src="image-20240424-211241.png" width="75%" align="" /><img src="image-20240424-211456.png" width="75%" align="" /><p>Selanjutnya hitung nilai posterior dari masing-masing class, nilai posterior didapat dari likelihood x priority. Untuk prioritynya setiap class didapat dari jumlah data setiap class / total keseluruhan data training,</p>
-<img src="image-20240424-210340.png" width="75%" align="" /><img src="image-20240424-210413.png" width="75%" align="" /><img src="image-20240424-210428.png" width="75%" align="" /><img src="image-20240424-211625.png" width="50%" align="" /><img src="image-20240424-211658.png" width="50%" align="" /><img src="image-20240424-211719.png" width="50%" align="" /><p>Berdasarkan nilai diatas nilai posterior dari setosa yang paling besar sehingga dapat disimpulkan data yang kita test diprediksi masuk ke dalam class Setosa. Dari perhitungan diatas dapat dibuktikan bahwa perhitungan dari kode sudah benar</p>
+<img src="gambar/image-20240424-211220.png" width="75%" align="" /><img src="gambar/image-20240424-211241.png" width="75%" align="" /><img src="gambar/image-20240424-211456.png" width="75%" align="" /><p>Selanjutnya hitung nilai posterior dari masing-masing class, nilai posterior didapat dari likelihood x priority. Untuk prioritynya setiap class didapat dari jumlah data setiap class / total keseluruhan data training,</p>
+<img src="gambar/image-20240424-210340.png" width="75%" align="" /><img src="gambar/image-20240424-210413.png" width="75%" align="" /><img src="gambar/image-20240424-210428.png" width="75%" align="" /><img src="gambar/image-20240424-211625.png" width="50%" align="" /><img src="gambar/image-20240424-211658.png" width="50%" align="" /><img src="gambar/image-20240424-211719.png" width="50%" align="" /><p>Berdasarkan nilai diatas nilai posterior dari setosa yang paling besar sehingga dapat disimpulkan data yang kita test diprediksi masuk ke dalam class Setosa. Dari perhitungan diatas dapat dibuktikan bahwa perhitungan dari kode sudah benar</p>
 <p>========================================== SEKIAN TERIMA KASIH =========================================</p>
 <a style='text-decoration:none;line-height:16px;display:flex;color:#5B5B62;padding:10px;justify-content:end;' href='https://deepnote.com?utm_source=created-in-deepnote-cell&projectId=5adff241-3cd0-45b3-912e-896625acc0fc' target="_blank">
 <img alt='Created in deepnote.com' style='display:inline;max-height:16px;margin:0px;margin-right:7.5px;' src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iODBweCIgaGVpZ2h0PSI4MHB4IiB2aWV3Qm94PSIwIDAgODAgODAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDU0LjEgKDc2NDkwKSAtIGh0dHBzOi8vc2tldGNoYXBwLmNvbSAtLT4KICAgIDx0aXRsZT5Hcm91cCAzPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGcgaWQ9IkxhbmRpbmciIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJBcnRib2FyZCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEyMzUuMDAwMDAwLCAtNzkuMDAwMDAwKSI+CiAgICAgICAgICAgIDxnIGlkPSJHcm91cC0zIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMjM1LjAwMDAwMCwgNzkuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICA8cG9seWdvbiBpZD0iUGF0aC0yMCIgZmlsbD0iIzAyNjVCNCIgcG9pbnRzPSIyLjM3NjIzNzYyIDgwIDM4LjA0NzY2NjcgODAgNTcuODIxNzgyMiA3My44MDU3NTkyIDU3LjgyMTc4MjIgMzIuNzU5MjczOSAzOS4xNDAyMjc4IDMxLjY4MzE2ODMiPjwvcG9seWdvbj4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0zNS4wMDc3MTgsODAgQzQyLjkwNjIwMDcsNzYuNDU0OTM1OCA0Ny41NjQ5MTY3LDcxLjU0MjI2NzEgNDguOTgzODY2LDY1LjI2MTk5MzkgQzUxLjExMjI4OTksNTUuODQxNTg0MiA0MS42NzcxNzk1LDQ5LjIxMjIyODQgMjUuNjIzOTg0Niw0OS4yMTIyMjg0IEMyNS40ODQ5Mjg5LDQ5LjEyNjg0NDggMjkuODI2MTI5Niw0My4yODM4MjQ4IDM4LjY0NzU4NjksMzEuNjgzMTY4MyBMNzIuODcxMjg3MSwzMi41NTQ0MjUgTDY1LjI4MDk3Myw2Ny42NzYzNDIxIEw1MS4xMTIyODk5LDc3LjM3NjE0NCBMMzUuMDA3NzE4LDgwIFoiIGlkPSJQYXRoLTIyIiBmaWxsPSIjMDAyODY4Ij48L3BhdGg+CiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMCwzNy43MzA0NDA1IEwyNy4xMTQ1MzcsMC4yNTcxMTE0MzYgQzYyLjM3MTUxMjMsLTEuOTkwNzE3MDEgODAsMTAuNTAwMzkyNyA4MCwzNy43MzA0NDA1IEM4MCw2NC45NjA0ODgyIDY0Ljc3NjUwMzgsNzkuMDUwMzQxNCAzNC4zMjk1MTEzLDgwIEM0Ny4wNTUzNDg5LDc3LjU2NzA4MDggNTMuNDE4MjY3Nyw3MC4zMTM2MTAzIDUzLjQxODI2NzcsNTguMjM5NTg4NSBDNTMuNDE4MjY3Nyw0MC4xMjg1NTU3IDM2LjMwMzk1NDQsMzcuNzMwNDQwNSAyNS4yMjc0MTcsMzcuNzMwNDQwNSBDMTcuODQzMDU4NiwzNy43MzA0NDA1IDkuNDMzOTE5NjYsMzcuNzMwNDQwNSAwLDM3LjczMDQ0MDUgWiIgaWQ9IlBhdGgtMTkiIGZpbGw9IiMzNzkzRUYiPjwvcGF0aD4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+' > </img>
