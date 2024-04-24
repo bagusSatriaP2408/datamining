@@ -1539,7 +1539,7 @@ dtype: int64
 <li><p>Ambil sejumlah K data dengan jarak terdekat, kemudian tentukan kelas dari data baru tersebut.</p></li>
 </ul>
 <p>Untuk mencari dekat atau jauhnya jarak antar titik pada kelas k biasanya dihitung menggunakan jarak Euclidean. Jarak Euclidean adalah formula untuk mencari jarak antara 2 titik dalam ruang dua dimensi. Berikut rumus untuk menghitung jarak Euclidean:</p>
-<img src="Gambar/rumus_euclidean.webp" width="" align="" /><p>Dimiliki sebuah iris dataset yang memiliki 5 missing value di kolom SepalLengthCm</p>
+<img src="gambar/rumus_euclidean.webp" width="" align="" /><p>Dimiliki sebuah iris dataset yang memiliki 5 missing value di kolom SepalLengthCm</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_14</span> <span class="o">=</span> <span class="n">_deepnote_execute_sql</span><span class="p">(</span><span class="s1">&#39;SELECT * FROM iris.iris_dataset_knn WHERE SepalLengthCm IS NULL&#39;</span><span class="p">,</span> <span class="s1">&#39;SQL_4BD01A4F_9F01_4CE8_9254_60CF462F2AD1&#39;</span><span class="p">,</span> <span class="n">audit_sql_comment</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">sql_cache_mode</span><span class="o">=</span><span class="s1">&#39;cache_disabled&#39;</span><span class="p">)</span>
@@ -1956,14 +1956,14 @@ dtype: int64
 <li><p>Local Outlier Factor (LOF)</p></li>
 </ul>
 <p>K-distance dan K-neighbors</p>
-<img src="Gambar/k-distance.webp" width="" align="" /><p>K-distance adalah jarak antara suatu titik, dan merupakan tetangga terdekat Kᵗʰ. Tetangga K yang dilambangkan dengan Nₖ(A) mencakup himpunan titik yang terletak di dalam atau pada lingkaran berjari-jari jarak K. K-tetangga bisa lebih dari atau sama dengan nilai K. Kita akan melihat contohnya. Katakanlah kita mempunyai empat titik A, B, C, dan D.                                                                                                     Jika K=2, K-tetangga A adalah C, B, dan D. Di sini, nilai K=2 tetapi ||N₂(A)|| = 3. Oleh karena itu, ||Nₖ(titik)|| akan selalu lebih besar atau sama dengan K.</p>
+<img src="gambar/k-distance.webp" width="" align="" /><p>K-distance adalah jarak antara suatu titik, dan merupakan tetangga terdekat Kᵗʰ. Tetangga K yang dilambangkan dengan Nₖ(A) mencakup himpunan titik yang terletak di dalam atau pada lingkaran berjari-jari jarak K. K-tetangga bisa lebih dari atau sama dengan nilai K. Kita akan melihat contohnya. Katakanlah kita mempunyai empat titik A, B, C, dan D.                                                                                                     Jika K=2, K-tetangga A adalah C, B, dan D. Di sini, nilai K=2 tetapi ||N₂(A)|| = 3. Oleh karena itu, ||Nₖ(titik)|| akan selalu lebih besar atau sama dengan K.</p>
 <p>Reachability distance (RD)</p>
-<img src="Gambar/reachability-distance.webp" width="" align="" /><p>Ini didefinisikan sebagai jarak K maksimum Xj dan jarak antara Xi dan Xj. Ukuran jarak bersifat khusus untuk masalah (Euclidean, Manhattan, dll.)</p>
-<img src="Gambar/reachability-distance-diagram.webp" width="" align="" /><p>Dalam istilah awam, jika titik Xi terletak di dalam K-tetangga Xj, maka jarak jangkauannya adalah K-jarak Xj (garis biru), jika tidak, jarak jangkauannya adalah jarak antara Xi dan Xj (garis oranye).</p>
+<img src="gambar/reachability-distance.webp" width="" align="" /><p>Ini didefinisikan sebagai jarak K maksimum Xj dan jarak antara Xi dan Xj. Ukuran jarak bersifat khusus untuk masalah (Euclidean, Manhattan, dll.)</p>
+<img src="gambar/reachability-distance-diagram.webp" width="" align="" /><p>Dalam istilah awam, jika titik Xi terletak di dalam K-tetangga Xj, maka jarak jangkauannya adalah K-jarak Xj (garis biru), jika tidak, jarak jangkauannya adalah jarak antara Xi dan Xj (garis oranye).</p>
 <p>Local reachability density (LRD)</p>
-<img src="Gambar/lrd.webp" width="" align="" /><p>LRD merupakan kebalikan dari rata-rata jarak jangkauan A dari tetangganya. Semakin besar jarak jangkauan rata-rata (yaitu, tetangga jauh dari titik tersebut), semakin sedikit kepadatan titik yang ada di sekitar titik tertentu. Ini menunjukkan seberapa jauh suatu titik dari kelompok titik terdekat. Nilai LRD yang rendah menunjukkan bahwa cluster terdekat berada jauh dari titik.</p>
+<img src="gambar/lrd.webp" width="" align="" /><p>LRD merupakan kebalikan dari rata-rata jarak jangkauan A dari tetangganya. Semakin besar jarak jangkauan rata-rata (yaitu, tetangga jauh dari titik tersebut), semakin sedikit kepadatan titik yang ada di sekitar titik tertentu. Ini menunjukkan seberapa jauh suatu titik dari kelompok titik terdekat. Nilai LRD yang rendah menunjukkan bahwa cluster terdekat berada jauh dari titik.</p>
 <p>Local Outlier Factor (LOF)</p>
-<img src="Gambar/lof.webp" width="" align="" /><p>LRD tiap titik digunakan untuk membandingkan dengan rata-rata LRD K tetangganya. LOF adalah perbandingan rata-rata LRD K tetangga A terhadap LRD A.</p>
+<img src="gambar/lof.webp" width="" align="" /><p>LRD tiap titik digunakan untuk membandingkan dengan rata-rata LRD K tetangganya. LOF adalah perbandingan rata-rata LRD K tetangga A terhadap LRD A.</p>
 <p>Jika suatu titik bukan merupakan pencilan (inlier), rasio rata-rata LRD tetangganya kira-kira sama dengan LRD suatu titik (karena kepadatan suatu titik dan tetangganya kira-kira sama). Dalam hal ini, LOF hampir sama dengan 1. Sebaliknya, jika suatu titik merupakan outlier, LRD suatu titik lebih kecil dari rata-rata LRD tetangganya. Maka nilai LOF akan tinggi.</p>
 <p>Umumnya jika LOF &gt; 1 maka dianggap outlier, namun hal tersebut tidak selalu benar. Katakanlah kita mengetahui bahwa kita hanya memiliki satu outlier dalam data, lalu kita ambil nilai LOF maksimum di antara semua nilai LOF, dan titik yang sesuai dengan nilai LOF maksimum akan dianggap sebagai outlier.</p>
 </section>
@@ -1988,7 +1988,7 @@ dtype: int64
 <li><p>Menghitung jarak dan menentukan tetangga</p></li>
 </ol>
 <p>Selanjutnya untuk menghitung jarak, kita menggunakan Euclidean Distance. Untuk rumusnya yaitu :</p>
-<img src="Gambar/rumus_euclidean.webp" width="" align="" /><p>Didapatkan hasil perhitungan jarak :</p>
+<img src="gambar/rumus_euclidean.webp" width="" align="" /><p>Didapatkan hasil perhitungan jarak :</p>
 <img src="tabel/tabel_euclidean1.webp" width="" align="" /><img src="tabel/tabel_euclidean.webp" width="" align="" /><p>Selanjutnya mari kita tentukan nilai K (banyak tetangga) yang akan kita gunakan. Mari gunakan nilai K = 3, lalu kita identifikasi jarak tetangga ke-3 dari masing-masing data.</p>
 <img src="tabel/tabel_tetangga3_1.webp" width="" align="" /><img src="tabel/tabel_tetangga3_2.webp" width="" align="" /><ol class="arabic simple" start="2">
 <li><p>Menghitung Reachability Distance (RD)</p></li>
@@ -1998,7 +1998,7 @@ dtype: int64
 <p>Yang dimana nilai dari Nk(o) akan lebih besar atau sama dengan nilai K</p>
 <p>Untuk contohnya pada objek a memiliki nilai jarak tetangga ke-3 yaitu 1,414214, berarti objek lain yang masuk ke dalam lingkupnya yaitu yang nilainya kurang atau sama dengan 1,414214 yang berarti berisikan {b, c, f}. Mari kita lakukan untuk objek yang lain.</p>
 <img src="tabel/tabel_n.webp" width="" align="" /><p>Selanjutnya hitung Reachability Distance dari maring-masing objek, untuk rumusnya yaitu :</p>
-<img src="Gambar/rd.webp" width="50%" align="" /><p>Sebagai contoh objek a, objek a memiliki 3 tetangga terdekat yaitu {b, c, f} kita lakukan perhitungan terhadap masing-masing objek, dengan memilih nilai terbesar dari perbandingan jarak tetangga ke-3 dari objek dengan jarak objek ke objek lain:</p>
+<img src="gambar/rd.webp" width="50%" align="" /><p>Sebagai contoh objek a, objek a memiliki 3 tetangga terdekat yaitu {b, c, f} kita lakukan perhitungan terhadap masing-masing objek, dengan memilih nilai terbesar dari perbandingan jarak tetangga ke-3 dari objek dengan jarak objek ke objek lain:</p>
 <p>reachdist3(b&lt;-a) = max{dist3(b), dist(b,a)}</p>
 <p>reachdist3(b&lt;-a) = max(1, 1)</p>
 <p>reachdist3(b&lt;-a) =1</p>
@@ -2007,13 +2007,13 @@ dtype: int64
 <li><p>Menghitung Local Reachability Distance (LRD)</p></li>
 </ol>
 <p>Selanjutnya melakukan perhitungan Local Reachability Distance (LRD), LRD dirumuskan seperti di bawah ini :</p>
-<img src="Gambar/image-20240320-015046.png" width="50%" align="" /><p>Berdasarkan rumus diatas bisa dideskripsikan bahwa LRD merupakan hasil dari pembagian banyak jumlah tetangga ke-n dari suatu objek dibagi dengan total dari reachdistance ability objek tersebut.</p>
+<img src="gambar/image-20240320-015046.png" width="50%" align="" /><p>Berdasarkan rumus diatas bisa dideskripsikan bahwa LRD merupakan hasil dari pembagian banyak jumlah tetangga ke-n dari suatu objek dibagi dengan total dari reachdistance ability objek tersebut.</p>
 <p>Sehinga jika dilakukan perhitungan untuk setiap objek didapatkan hasil</p>
 <img src="tabel/image-20240320-020236.png" width="" align="" /><ol class="arabic simple" start="4">
 <li><p>Menghitung Local Outlier Factor (LOF)</p></li>
 </ol>
 <p>Selanjutnya yang terakhir yaitu menghitung Local Outlier Factor (LOF), dirumuskan sebagai berikut :</p>
-<img src="Gambar/image-20240320-020521.png" width="75%" align="" /><p>Berdasarkan rumus diatas diketahui jika LOF didapat dari hasil perkalian jumlah nilai lrd suatu objek dikali dengan jumlah reachability distance suatu objek.</p>
+<img src="gambar/image-20240320-020521.png" width="75%" align="" /><p>Berdasarkan rumus diatas diketahui jika LOF didapat dari hasil perkalian jumlah nilai lrd suatu objek dikali dengan jumlah reachability distance suatu objek.</p>
 <p>Sehinga jika dilakukan perhitungan untuk setiap objek didapatkan hasil</p>
 <img src="tabel/image-20240320-021026.png" width="" align="" /><p>Dari hasil diatas bisa ditemukan bahwa nilai lof e menyimpang dikarenakan perbedaan yang terlalu jauh dengan objek yang lain, sehingga bisa disimpulkan bahwa terdapat outlier pada baris e.</p>
 </section>
